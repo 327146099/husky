@@ -1,0 +1,5 @@
+dependencies {
+    compile project(":husky-core:husky-core-mail:husky-core-mail-common")
+
+    compile group: 'com.xuxueli', name: 'xxl-rpc-core', version: '1.4.1'
+}

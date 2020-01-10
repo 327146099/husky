@@ -1,0 +1,12 @@
+dependencies {
+
+    compile 'org.springframework.boot:spring-boot-starter-web',
+            'org.springframework.boot:spring-boot-starter-websocket',
+            project(":husky-core:husky-core-common"),
+            project(":husky-core:husky-core-util"),
+            rootProject.ext.dependencies["UserAgentUtils"],
+            rootProject.ext.dependencies["easypoi-web"]
+
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+}
+

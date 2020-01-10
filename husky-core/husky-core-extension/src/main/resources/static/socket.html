@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日志信息</title>
+</head>
+<body>
+<div class="logContainer">
+
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
+<script>
+    var ws = new WebSocket("ws://127.0.0.1:8085/husky/websocket/log");
+
+    //【用于指定连接成功后的回调函数】
+    ws.onopen = function (evt) {
+        console.log("Connection open ...");
+        ws.send("Hello WebSockets!");
+    };
+
+    //【用于指定收到服务器数据后的回调函数】
+    //【服务器数据有可能是文本，也有可能是二进制数据，需要判断】
+    var index = 0;
+    ws.onmessage = function (event) {
+        $(".logContainer").append("<div style='margin-bottom: 5px;'>" + event.data + "</div>")
+        window.scrollTo(0, document.body.scrollHeight);
+    };
+
+    //[【于指定连接关闭后的回调函数。】
+    ws.onclose = function (evt) {
+        console.log("Connection closed.");
+    };
+
+</script>
+</body>
+</html>

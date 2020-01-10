@@ -1,0 +1,6 @@
+dependencies {
+
+    compile project(":husky-core:husky-core-common"),
+            rootProject.ext.dependencies['xxl-job']
+}
+

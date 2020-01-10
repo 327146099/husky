@@ -1,0 +1,17 @@
+dependencies {
+
+    compile "com.baomidou:mybatis-plus-boot-starter:3.3.0",
+            'com.baomidou:dynamic-datasource-spring-boot-starter:2.5.6'
+
+    compile "org.springframework.boot:spring-boot-starter-aop",
+            'org.springframework.boot:spring-boot-starter-web'
+
+    compile project(":husky-core:husky-core-auth"),
+            project(":husky-core:husky-core-util"),
+            project(":husky-core:husky-core-common")
+
+
+
+
+}
+

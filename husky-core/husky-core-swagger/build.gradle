@@ -1,0 +1,8 @@
+dependencies {
+
+    compile group: 'com.github.xiaoymin', name: 'knife4j-spring-boot-starter', version: '1.9.6'
+
+    compile project(":husky-core:husky-core-common")
+
+}
+

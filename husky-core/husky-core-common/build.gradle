@@ -1,0 +1,6 @@
+dependencies {
+
+    compile 'com.baomidou:mybatis-plus-annotation:3.2.0'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+
+}

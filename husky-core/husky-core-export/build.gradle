@@ -1,0 +1,15 @@
+dependencies {
+
+    implementation project(":husky-core:husky-core-common"),
+            project(":husky-core:husky-core-util")
+
+    compile rootProject.ext.dependencies["easypoi"],
+            rootProject.ext.dependencies["beetl"],
+            rootProject.ext.dependencies["xmlworker"],
+            rootProject.ext.dependencies["itextpdf"],
+            rootProject.ext.dependencies["itext-asian"]
+
+    compile 'org.springframework.boot:spring-boot-starter-web'
+
+
+}

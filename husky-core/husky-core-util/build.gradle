@@ -1,0 +1,19 @@
+dependencies {
+
+    implementation project(":husky-core:husky-core-common")
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    compile rootProject.ext.dependencies["guava"],
+            rootProject.ext.dependencies["commons-lang3"],
+            rootProject.ext.dependencies["commons-collections4"],
+            rootProject.ext.dependencies["ognl"],
+            rootProject.ext.dependencies["fastjson"],
+            rootProject.ext.dependencies["commons-io"],
+            rootProject.ext.dependencies["commons-text"],
+            rootProject.ext.dependencies["reflections"],
+            rootProject.ext.dependencies["modelmapper"],
+            rootProject.ext.dependencies["okhttp"],
+            'com.squareup.okhttp3:logging-interceptor:4.2.2'
+
+}

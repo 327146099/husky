@@ -1,0 +1,12 @@
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-aop',
+            rootProject.ext.dependencies["UserAgentUtils"],
+            rootProject.ext.dependencies["oshi-core"]
+
+    compile project(":husky-core:husky-core-common"),
+            project(":husky-core:husky-core-auth"),
+            project(":husky-core:husky-core-util"),
+            project(":husky-core:husky-core-mybatis"),
+            project(":husky-core:husky-core-export")
+
+}
