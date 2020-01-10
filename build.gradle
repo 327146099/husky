@@ -1,0 +1,68 @@
+buildscript {
+    repositories {
+        maven {
+            url "http://maven.aliyun.com/nexus/content/groups/public"
+        }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.5.RELEASE")
+    }
+}
+
+apply from: "config.gradle"
+
+allprojects {
+
+    group 'com.neusiri'
+    version '1.0-SNAPSHOT'
+
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    // java文件编码方式设置为utf-8
+    compileJava.options.encoding = 'UTF-8'
+    compileTestJava.options.encoding = 'UTF-8'
+
+    repositories {
+        maven {
+            url "http://maven.aliyun.com/nexus/content/groups/public"
+        }
+
+        maven {
+            credentials {
+                username 'wYnE51'
+                password 'qOSq0ogl8f'
+            }
+            url 'https://repo.rdc.aliyun.com/repository/39130-release-aVBszH/'
+        }
+    }
+
+    dependencies {
+
+        annotationProcessor "org.projectlombok:lombok:1.18.8"
+
+        compileOnly "org.projectlombok:lombok:1.18.8"
+
+        compile group: 'io.swagger', name: 'swagger-annotations', version: '1.5.22'
+    }
+}
+
+subprojects {
+    jar {
+        enabled = true
+    }
+}
+
+project('husky-app-starter') {
+    dependencies {
+        compile project(":husky-service:husky-system")
+    }
+}
+
+

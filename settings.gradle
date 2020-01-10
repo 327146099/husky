@@ -1,0 +1,26 @@
+rootProject.name = 'husky'
+
+include 'husky-ops:husky-admin'
+include 'husky-ops:xxl-job-admin'
+include 'husky-ops:husky-mail-server'
+
+include 'husky-client'
+include 'husky-client-test'
+
+include 'husky-core:husky-core-common'
+include 'husky-core:husky-core-export'
+include 'husky-core:husky-core-auth'
+include 'husky-core:husky-core-boot'
+include 'husky-core:husky-core-launch'
+include 'husky-core:husky-core-mail:husky-core-mail-common'
+include 'husky-core:husky-core-mail:husky-core-mail-client'
+include 'husky-core:husky-core-mybatis'
+include 'husky-core:husky-core-schedule'
+include 'husky-core:husky-core-swagger'
+include 'husky-core:husky-core-util'
+include 'husky-core:husky-core-wx'
+include 'husky-core:husky-core-extension'
+
+include 'husky-app-starter'
+
+include 'husky-service:husky-system'
